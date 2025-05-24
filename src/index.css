@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 20px 50px;
+  background-color: #948979;
+  font-family: 'MyFont', sans-serif;
+
+}
+@font-face {
+  font-family: 'MyFont';
+  src: url('./fonts/Lexend-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.text-center{
+  text-align: center;
+}
+.text-primary{
+  color: #222831;
+}
+.text-secondary{
+  color: #DFD0B8;
+}
+.text-highlight{
+  color: beige;
+}
+.text-tertiary{
+  color: #948979;
+}
+.btn-primary{
+  background-color: #222831;
+  color: beige;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  min-width: 140px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.btn-primary:hover{
+  transform: scale(1.05); 
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  color: #222831;
+  background-color: beige
+}
