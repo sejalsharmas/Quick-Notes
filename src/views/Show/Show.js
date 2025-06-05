@@ -19,11 +19,12 @@ function Show() {
        
         <div className='note-card-container'>
         {notes.map((note)=>{
-          const {index, title, description, category, emoji} = note;
+          const {id, title, description, category, emoji} = note;
           return(
               
                   <NoteCard
-                  index={index}
+                   key={note.id}
+                   id={note.id}
                   title={title}
                   description={description}
                   category={category}

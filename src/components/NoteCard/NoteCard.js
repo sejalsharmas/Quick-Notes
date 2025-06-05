@@ -1,14 +1,14 @@
 import React from 'react'
 import './Notecard.css'
 
-function deleteNote(index){
+function deleteNote(id){
   const savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
-  savedNotes.splice(index, 1);
-  localStorage.setItem('notes', JSON.stringify(savedNotes));
+  const updatedNotes = savedNotes.filter(note => note.id !== id);
+  localStorage.setItem('notes', JSON.stringify(updatedNotes));
   window.location.reload();
 }
 function NoteCard({
-    index,
+    id,
     title,
     description,
     category,
@@ -22,9 +22,7 @@ function NoteCard({
           <p className='note-card-description'>{description}</p>
           <spna className='note-card-category'>{category}</spna>
           <button className='delete-btn'
-          onClick={() =>{
-            deleteNote(index)
-          }}
+            onClick={() => deleteNote(id)}
           >Delete</button>
          </div>
     </div>

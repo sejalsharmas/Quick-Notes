@@ -17,6 +17,7 @@ function Add() {
     const notes = JSON.parse(localStorage.getItem('notes')) || [];
 
     const noteObject = {
+      id: Date.now(),
       title,
       description,
       category,
