@@ -1,10 +1,12 @@
 import React from 'react'
 import './Notecard.css'
+import toast from 'react-hot-toast';
 
 function deleteNote(id){
   const savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
   const updatedNotes = savedNotes.filter(note => note.id !== id);
   localStorage.setItem('notes', JSON.stringify(updatedNotes));
+  toast .success('Note deleted successfully')
   window.location.reload();
 }
 function NoteCard({
@@ -23,6 +25,7 @@ function NoteCard({
           <spna className='note-card-category'>{category}</spna>
           <button className='delete-btn'
             onClick={() => deleteNote(id)}
+
           >Delete</button>
          </div>
     </div>
