@@ -39,7 +39,22 @@ body {
 }
 .btn-primary:hover{
   transform: scale(1.05); 
+  transition: transform 0.3s;
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
   color: #222831;
   background-color: beige
+}
+ 
+@media screen and (max-width: 500px) {
+  .btn-primary{
+    padding: 10px 5px;
+    margin: 10px;
+    z-index: 10;
+  }
+  .btn-primary:hover{
+    background-color: #999999;
+  }
+  body{
+    padding: 5px 10px;
+  }
 }

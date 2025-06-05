@@ -1,10 +1,11 @@
 import React from 'react'
 import './Home.css'
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
     <div>
-      <h1 className='text-center text-primary' style={{ fontSize: '40px' }}>📋 Quick Notes</h1>
+      <h1 className='text-center text-primary app-title'>📋 Quick Notes</h1>
       <p className='text-center' style={{ fontSize: '20px' }}>
         A simple note-taking application where you can <span style={{color: 'black', backgroundColor: 'beige'}}>create, read, and delete notes</span> 📒🛡️🧠.
       </p>
@@ -23,8 +24,12 @@ function Home() {
         </div>
       </div>
       <div className='btn-container'>
+        <Link to={'/add'}>
         <button className='btn-primary'>✍️ Add Notes</button>
+        </Link>
+        <Link to={'/show'}>
         <button className='btn-primary'>📖 Show Notes</button>
+        </Link>
       </div>
       
 
