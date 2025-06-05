@@ -2,6 +2,7 @@ import React,{ useEffect, useState } from 'react'
 import './Show.css'
 import Homeicon from '../../components/Homeicon/Homeicon'
 import NoteCard from '../../components/NoteCard/NoteCard.js'
+import { Link } from 'react-router-dom'
 
 
 function Show() {
@@ -30,6 +31,9 @@ function Show() {
                   />  
             )
 })}</div>
+      <Link to={'/add'}>
+      <button className='btn-primary button'>Add Notes</button>
+      </Link>
        
       <Homeicon className='home-icons'/>
   </div>

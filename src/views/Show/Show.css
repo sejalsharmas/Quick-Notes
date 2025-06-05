@@ -4,12 +4,19 @@
     justify-content: center;
     margin: 20px;
     gap: 20px;
-   height: 75vh;
+   height: 65vh;
    overflow-y: scroll;
  }
+.button{
+    margin-left: 650px;
+}
 
 @media screen and (max-width: 500px){
     .home-icons{
         top: 80vh;
+    }
+    .button{
+        margin-left: 110px;
+        margin-top: 85px;
     }
 }
